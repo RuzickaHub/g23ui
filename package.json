@@ -1,0 +1,53 @@
+{
+  "name": "command-center-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard aplikací s externími daty a automatickým deployem",
+  "main": "src/js/app.js",
+  "scripts": {
+    "dev": "live-server public --port=3000 --no-browser",
+    "dev:src": "live-server src --port=3001 --no-browser",
+    "build": "node build.js",
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "eslint src/js/*.js",
+    "format": "prettier --write 'src/**/*.{js,css,html}'",
+    "serve": "http-server dist -p 8080",
+    "clean": "rm -rf dist",
+    "predeploy": "npm run build",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "dashboard",
+    "command-center",
+    "productivity",
+    "web-app",
+    "github-pages"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/command-center-dashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/command-center-dashboard/issues"
+  },
+  "homepage": "https://yourusername.github.io/command-center-dashboard",
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "gh-pages": "^5.0.0",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "categories": [
+    {
+      "id": "productivity",
+      "name": "Produktivita",
+      "icon": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=200&fit=crop",
+      "description": "Nástroje pro produktivitu a správu úkolů"
+    },
+    {
+      "id": "development",
+      "name": "Vývoj",
+      "icon": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=200&h=200&fit=crop",
+      "description": "Vývojářské nástroje a služby"
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "icon": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=200&h=200&fit=crop",
+      "description": "Designové nástroje a grafické editory"
+    },
+    {
+      "id": "communication",
+      "name": "Komunikace",
+      "icon": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=200&h=200&fit=crop",
+      "description": "Komunikační a kolaborační nástroje"
+    },
+    {
+      "id": "ai",
+      "name": "AI & Nástroje",
+      "icon": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200&h=200&fit=crop",
+      "description": "Umělá inteligence a automatizace"
+    },
+    {
+      "id": "entertainment",
+      "name": "Zábava",
+      "icon": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=200&h=200&fit=crop",
+      "description": "Zábavní a multimediální služby"
+    },
+    {
+      "id": "security",
+      "name": "Bezpečnost",
+      "icon": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=200&h=200&fit=crop",
+      "description": "Nástroje pro kybernetickou bezpečnost"
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud & Hosting",
+      "icon": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=200&h=200&fit=crop",
+      "description": "Cloudové služby a hosting"
+    }
+  ],
+  "apps": [
+    {
+      "id": "google",
+      "name": "Google",
+      "url": "https://google.com",
+      "icon": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=200&h=200&fit=crop",
+      "category": "productivity",
+      "description": "Vyhledávač a sada produktivních nástrojů včetně Gmail, Docs, Calendar a dalších. Integrovaná cloudová úložiště a synchronizace napříč zařízeními."
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "url": "https://notion.so",
+      "icon": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&h=200&fit=crop",
+      "category": "productivity",
+      "description": "Všestranný workspace pro poznámky, databáze, projekty a spolupráci. Kombinuje funkce wiki, kanban boardů a dokumentů."
+    },
+    {
+      "id": "trello",
+      "name": "Trello",
+      "url": "https://trello.com",
+      "icon": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=200&h=200&fit=crop",
+      "category": "productivity",
+      "description": "Nástroj pro správu projektů pomocí Kanban boardů a karet. Intuitivní rozhraní pro vizualizaci pracovních postupů."
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "url": "https://slack.com",
+      "icon": "https://images.unsplash.com/photo-1579293672572-1d6e6b5edc1c?w=200&h=200&fit=crop",
+      "category": "productivity",
+      "description": "Komunikační platforma pro týmy s kanály, zprávami a integracemi. Podpora souborů, hlasových hovorů a video konferencí."
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "url": "https://github.com",
+      "icon": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=200&h=200&fit=crop",
+      "category": "development",
+      "description": "Platforma pro hostování kódu, správu verzí a spolupráci na vývoji. Největší komunita vývojářů open-source projektů."
+    },
+    {
+      "id": "stackoverflow",
+      "name": "Stack Overflow",
+      "url": "https://stackoverflow.com",
+      "icon": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=200&h=200&fit=crop",
+      "category": "development",
+      "description": "Komunitní Q&A platforma pro programátory a vývojáře. Miliony otázek a odpovědí pokrývajících všechny programovací jazyky."
+    },
+    {
+      "id": "codepen",
+      "name": "CodePen",
+      "url": "https://codepen.io",
+      "icon": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=200&h=200&fit=crop",
+      "category": "development",
+      "description": "Online editor pro front-end vývoj s živým náhledem HTML, CSS a JavaScript. Platforma pro sdílení kódu a experimentování."
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "url": "https://vercel.com",
+      "icon": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=200&h=200&fit=crop",
+      "category": "development",
+      "description": "Platforma pro hostování a deployment frontend aplikací a statických stránek. Optimální pro Next.js a moderní webové aplikace."
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "url": "https://figma.com",
+      "icon": "https://images.unsplash.com/photo-1561070791-4c9b95a9e2a9?w=200&h=200&fit=crop",
+      "category": "design",
+      "description": "Online designový nástroj pro tvorbu UI/UX, prototypů a kolaboraci v reálném čase. Cloudové ukládání a verzování."
+    },
+    {
+      "id": "adobe",
+      "name": "Adobe Creative Cloud",
+      "url": "https://adobe.com",
+      "icon": "https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?w=200&h=200&fit=crop",
+      "category": "design",
+      "description": "Kompletní sada profesionálních kreativních nástrojů včetně Photoshop, Illustrator, After Effects a dalších."
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "url": "https://canva.com",
+      "icon": "https://images.unsplash.com/photo-1620336655055-bd87c5d1d73f?w=200&h=200&fit=crop",
+      "category": "design",
+      "description": "Online designový nástroj pro tvorbu grafických materiálů, prezentací a sociálních médií. Šablony pro začátečníky i profesionály."
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "url": "https://discord.com",
+      "icon": "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=200&h=200&fit=crop",
+      "category": "communication",
+      "description": "Hlasová, video a textová komunikační platforma pro komunity a týmy. Vlastní servery, role a rozšíření."
+    },
+    {
+      "id": "zoom",
+      "name": "Zoom",
+      "url": "https://zoom.us",
+      "icon": "https://images.unsplash.com/photo-1589870116115-46a49969b0b8?w=200&h=200&fit=crop",
+      "category": "communication",
+      "description": "Platforma pro video konference, online schůzky a webináře. Kvalitní přenos videa a audio, sdílení obrazovky."
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp Web",
+      "url": "https://web.whatsapp.com",
+      "icon": "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=200&h=200&fit=crop",
+      "category": "communication",
+      "description": "Webová verze populární messaging aplikace pro komunikaci v reálném čase. Synchronizace s mobilní aplikací."
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://chat.openai.com",
+      "icon": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200&h=200&fit=crop",
+      "category": "ai",
+      "description": "Pokročilý AI asistent schopný odpovídat na otázky, generovat text a pomáhat s úkoly. Model GPT-4 s pokročilými možnostmi."
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "url": "https://midjourney.com",
+      "icon": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=200&h=200&fit=crop",
+      "category": "ai",
+      "description": "AI nástroj pro generování obrázků z textových popisů pomocí strojového učení. Vysoká kvalita a kreativní možnosti."
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "icon": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200&h=200&fit=crop",
+      "category": "ai",
+      "description": "AI asistent zaměřený na bezpečnost a užitečnost s pokročilými konverzačními schopnostmi. Velký kontextový rozsah."
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "url": "https://youtube.com",
+      "icon": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=200&h=200&fit=crop",
+      "category": "entertainment",
+      "description": "Platforma pro sdílení a sledování videí všech druhů a žánrů. Největší video služba na světě s miliardami uživatelů."
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "url": "https://spotify.com",
+      "icon": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?w=200&h=200&fit=crop",
+      "category": "entertainment",
+      "description": "Streamovací služba pro hudbu, podcasty a audio obsah s personalizovanými doporučeními. Obrovská knihovna skladeb."
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "url": "https://netflix.com",
+      "icon": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=200&h=200&fit=crop",
+      "category": "entertainment",
+      "description": "Streamovací služba pro filmy, seriály a dokumenty s originální tvorbou. Kvalitní obsah ve 4K a HDR."
+    },
+    {
+      "id": "lastpass",
+      "name": "LastPass",
+      "url": "https://lastpass.com",
+      "icon": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=200&h=200&fit=crop",
+      "category": "security",
+      "description": "Správce hesel s end-to-end šifrováním. Synchronizace hesel napříč zařízeními a generátor bezpečných hesel."
+    },
+    {
+      "id": "aws",
+      "name": "AWS Console",
+      "url": "https://aws.amazon.com",
+      "icon": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=200&h=200&fit=crop",
+      "category": "cloud",
+      "description": "Amazon Web Services - cloudová platforma s více než 200 službami od datových center po celém světě."
+    },
+    {
+      "id": "digitalocean",
+      "name": "DigitalOcean",
+      "url": "https://digitalocean.com",
+      "icon": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=200&h=200&fit=crop",
+      "category": "cloud",
+      "description": "Cloudová platforma pro vývojáře s jednoduchým pricing modelem a výkonnými virtuálními servery."
+    }
+  ],
+  "settings": {
+    "lastUpdated": "2024-01-15",
+    "version": "1.0.0",
+    "defaultView": "categories"
+  }
+}

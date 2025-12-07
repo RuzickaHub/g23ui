@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Center Dashboard</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=100&h=100&fit=crop" alt="Logo">
+        </div>
+        <h1 class="page-title">Dashboard</h1>
+        <div class="search-container">
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="Hledat kategorie nebo aplikace...">
+            </div>
+        </div>
+    </header>
+    
+    <div class="breadcrumb" id="breadcrumb">
+        <div class="breadcrumb-item active" data-view="categories">Kategorie</div>
+    </div>
+    
+    <button class="back-button hidden" id="backButton">
+        <i class="fas fa-arrow-left"></i>
+        <span>Zpět na kategorie</span>
+    </button>
+    
+    <main class="dashboard-grid" id="dashboardGrid">
+        <!-- Content loaded by JavaScript -->
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Načítám data...</p>
+        </div>
+    </main>
+    
+    <div class="status-bar">
+        <div>Command Center Dashboard v1.0</div>
+        <div id="itemCount">Načítám...</div>
+    </div>
+    
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle">Detaily aplikace</div>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-app-info">
+                    <div class="modal-app-icon" id="modalAppIcon">
+                        <img src="" alt="App Icon">
+                    </div>
+                    <div class="modal-app-details">
+                        <h3 id="modalAppName">Název aplikace</h3>
+                        <div class="modal-app-url" id="modalAppUrl">example.com</div>
+                        <div class="modal-category" id="modalCategory">Kategorie</div>
+                    </div>
+                </div>
+                <div class="modal-description" id="modalDescription">
+                    Popis aplikace se zobrazí zde.
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="modalOpenBtn">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Otevřít</span>
+                    </button>
+                    <button class="btn" id="modalCopyBtn">
+                        <i class="fas fa-copy"></i>
+                        <span>Kopírovat URL</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/js/app.js"></script>
+</body>
+</html>
