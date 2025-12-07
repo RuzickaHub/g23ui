@@ -5,7 +5,7 @@
 
 // Konfigurace aplikace
 const CONFIG = {
-    dataUrl: '../src/data/dashboard-data.json',
+    dataUrl: 'src/data/dashboard-data.json',
     version: '1.0.0',
     defaultView: 'categories',
     cacheTime: 5 * 60 * 1000, // 5 minut cache
@@ -120,6 +120,7 @@ async function loadDashboardData() {
         if (cachedData && !isCacheExpired(cachedData.timestamp)) {
             state.dashboardData = cachedData.data;
             state.lastUpdate = cachedData.timestamp;
+            hideLoading();
             return;
         }
         
@@ -135,8 +136,11 @@ async function loadDashboardData() {
         // Cache the data
         cacheData(state.dashboardData);
         
+        hideLoading();
+        
     } catch (error) {
         console.error('Error loading data:', error);
+        hideLoading();
         throw error;
     }
 }
@@ -470,13 +474,23 @@ function updateSearchPlaceholder(text) {
  * Zobrazení načítání
  */
 function showLoading() {
-    clearDashboardGrid();
-    elements.dashboardGrid.innerHTML = `
+    const loadingHTML = `
         <div class="loading-spinner">
             <div class="spinner" aria-hidden="true"></div>
             <p>Načítám data...</p>
         </div>
     `;
+    
+    if (elements.dashboardGrid) {
+        elements.dashboardGrid.innerHTML = loadingHTML;
+    }
+}
+
+/**
+ * Skrytí načítání
+ */
+function hideLoading() {
+    // Loading is hidden when content is rendered
 }
 
 /**
@@ -648,6 +662,11 @@ function formatDate(date) {
         hour: '2-digit',
         minute: '2-digit'
     }).format(new Date(date));
+}
+
+// Helper functions
+function hideLoading() {
+    // Already handled in render functions
 }
 
 // Public API pro vývoj (pokud je potřeba)
