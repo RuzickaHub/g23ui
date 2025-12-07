@@ -22,14 +22,12 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+      uses: actions/checkout@v4
     
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '20'
         cache: 'npm'
     
     - name: Install dependencies
@@ -41,8 +39,8 @@ jobs:
         mkdir -p dist
         
         # Kopírování souborů do dist
-        cp -r public/* dist/ || true
-        cp -r src dist/ || true
+        cp -r public/* dist/ 2>/dev/null || true
+        cp -r src dist/ 2>/dev/null || true
         
         # Pokud existuje package.json, zkopírovat
         [ -f "package.json" ] && cp package.json dist/ || true
@@ -50,36 +48,84 @@ jobs:
         # Vytvoření index.html pokud neexistuje
         if [ ! -f "dist/index.html" ]; then
           echo "Creating minimal index.html"
-          cat > dist/index.html << EOF
+          cat > dist/index.html << 'EOF'
           <!DOCTYPE html>
           <html>
           <head>
               <title>Command Center Dashboard</title>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                  body {
+                      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      min-height: 100vh;
+                      margin: 0;
+                      background: #111;
+                      color: #fff;
+                  }
+                  .container {
+                      text-align: center;
+                      padding: 2rem;
+                  }
+                  .spinner {
+                      border: 4px solid rgba(255,255,255,0.1);
+                      border-left-color: #3b82f6;
+                      border-radius: 50%;
+                      width: 40px;
+                      height: 40px;
+                      animation: spin 1s linear infinite;
+                      margin: 0 auto 1rem;
+                  }
+                  @keyframes spin {
+                      to { transform: rotate(360deg); }
+                  }
+              </style>
           </head>
           <body>
-              <h1>Dashboard is building...</h1>
+              <div class="container">
+                  <div class="spinner"></div>
+                  <h1>Command Center Dashboard</h1>
+                  <p>Building... Please wait.</p>
+              </div>
           </body>
           </html>
           EOF
         fi
         
-        echo "Build completed successfully"
+        # Update paths in index.html for production
+        if [ -f "dist/index.html" ]; then
+          sed -i 's|../src/data/|src/data/|g' dist/index.html
+          sed -i 's|../src/css/|src/css/|g' dist/index.html
+          sed -i 's|../src/js/|src/js/|g' dist/index.html
+        fi
+        
+        echo "✅ Build completed successfully"
+        echo "📁 Build directory: dist/"
+        echo "📊 Files in dist/:"
+        find dist -type f | head -10
     
     - name: Setup Pages
-      uses: actions/configure-pages@v3
+      uses: actions/configure-pages@v4
     
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
         path: './dist'
     
-    - name: Show build info
+    - name: Show build summary
       run: |
-        echo "Build completed at: $(date)"
-        echo "Directory structure:"
-        find dist -type f | head -20
+        echo "Build Summary:"
+        echo "--------------"
+        echo "Timestamp: $(date)"
+        echo "Node Version: $(node --version)"
+        echo "NPM Version: $(npm --version)"
+        if [ -d "dist" ]; then
+          echo "Dist size: $(du -sh dist | cut -f1)"
+          echo "File count: $(find dist -type f | wc -l)"
+        fi
 
   deploy:
     environment:
@@ -91,4 +137,4 @@ jobs:
     steps:
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
