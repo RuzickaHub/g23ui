@@ -43,6 +43,14 @@
       "description": "Platforma pro hostování kódu"
     },
     {
+      "id": "fig",
+      "name": "Figmnnsa",
+      "url": "https://figma.com",
+      "icon": "https://images.unsplash.com/photo-1561070791-4c9b95a9e2a9?w=200&h=200&fit=crop",
+      "category": "design",
+      "description": "Online designový nástroj"
+    },
+    {
       "id": "figma",
       "name": "Figma",
       "url": "https://figma.com",
